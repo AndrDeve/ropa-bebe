@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border:none;
+    text-transform: capitalize; /*empezar la primera letra de la palabra en mayuscula */
+    transition: all .2s linear; /* transicion de los hover, tambien para la transicion en responsivo */
+}
+
+// variables colores
+$verde-oliva:#6a7964;
+$white:#ffffff;
+$black:#030303;
+$fondo:#eeeeee;
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    overflow-x: hidden;
+}
+
+body{
+  background: $fondo;
+}
+
+section{
+  padding:5rem 6%; /*con este le damos la misma medida a todas las secciones*/
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: $verde-oliva;
+    z-index: 4000;
+}
+
+.header__top{
+    display: flex;
+    justify-content: space-between;
+    padding: .6% 3%;
+    flex-wrap: wrap;
+
+    .user{
+        display: flex;
+        align-items: center;
+
+        i{
+            color: $white;
+            font-size: 2rem;
+            padding-right: .5rem;
+            align-items: center;
+        }
+
+        a{
+            color: $white;
+            font-size: 1.5rem;
+            padding-right: .5rem;
+            align-items: center;
+        }
+
+        p{
+            color: $white;
+            font-size: 1.5rem;
+            align-items: center;
+        }
+    }
+
+    .envios{
+
+        p{
+            color: $white;
+            font-size: 1.8rem;
+            font-weight:600;
+        }
+    }
+
+    .redes__sociales{
+        display: flex;
+        align-items: center;
+
+        p{
+            color: $white;
+            font-size: 1.5rem;
+        }
+
+        a{
+            color: $white;
+            font-size: 1.6rem;
+            padding: 0 .7rem;
+        }
+    }
+}
+
+.header__fixed{
+    background: $fondo;
+
+    .header__fixed__items{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10%;
+        z-index: 100;
+
+        p{
+            font-size: 2.5rem;
+            font-weight:bold;
+        }
+    }
+
+    .navbar{
+        
+        a{  
+            display: inline-block; /*centra los links como aling item*/
+            color: $black;
+            font-size: 2rem;
+            padding: 2rem 1.5rem;
+
+            &:hover{
+                background:$verde-oliva;
+                color: $white;
+              }
+        }
+    }
+}
+
+#menu-btn{
+  font-size: 3rem;
+  color: $black;
+  cursor: pointer;
+  display: none;
+}
+
+
+
+//slider
+.btn{
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  padding-right: 3rem;
+  background: linear-gradient(130deg, $verde-oliva 93%, transparent 90%);
+  color: $white;
+  cursor: pointer;
+  font-size: 1.7rem;
+  font-weight: 600;
+
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+
+.home{
+    padding: 0;
+    margin-top: 10.5rem;
+  
+    .slide{
+      min-height: 85vh;
+      background-size: cover !important; //se centra "casi" imagen
+      background-position: center !important; // busca el centro de la imagen "abdomen"
+      padding: 2rem 9%; // se mueve texto
+      display: flex;       // centra el texto en pantalla "abdomen" 
+      align-items: center; // centra el texto en pantalla "abdomen"
+  
+      .content{
+        width: 60rem;
+  
+        span{
+          font-size: 3rem;
+          color: $verde-oliva;
+          font-weight:bold;
+          display: block;
+        }
+  
+        h3{
+          font-size: 5rem;
+          color: $white;
+          padding: 1rem 0;
+        }
+      }
+    }
+  }
+
+  .swiper-pagination-bullet{
+    height: 2rem;
+    width: 2rem;
+    background: $white;
+    border-radius: 0;
+  
+    &.swiper-pagination-bullet-active{
+      background: $white;
+    }
+  }
+
+
+  // items
+ .items{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    flex-wrap: wrap;
+
+    .item-items{
+      display: flex;
+      align-items: center;
+
+      i{
+        font-size: 3.5rem;
+        color: $verde-oliva;
+        margin-right: 1rem;
+      }
+
+      .item-textos{
+        font-size: 1.7rem;
+
+        h3{
+          font-weight: 600;
+          line-height: 3.5rem;
+        }
+
+        span{
+          color: rgb(118, 118, 118);
+          font-weight: 600;
+        }
+      }
+    }
+ }
+
+
+
+
+
+
+
+
+.titulos{
+  padding: 0 6%;
+
+  .contenedor-productos{
+    margin-top: 6rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .contenedor{
+      margin-bottom: 3rem;
+
+      img{
+        height: 35rem;
+        width: 32rem;
+        border-radius: .5rem;
+        cursor: pointer;
+      }
+
+      .textos{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row-reverse;
+
+        p{
+          color: $verde-oliva;
+          font-size: 1.8rem;
+          font-weight: 600;
+        }
+
+        span{
+          color: $verde-oliva;
+          font-size: 1.3rem;
+        }
+      }
+
+
+      span{
+        color: #5c5c5c;
+        font-size: 1.8rem;
+      }
+    }
+
+    button{
+      background: $verde-oliva;
+      color: $white;
+      padding: 1rem 2rem;
+      margin-top: .8rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+
+      &:hover{
+        transform: scale(1.03);
+      }
+    }
+  }
+}
+
+
+.heading{
+  text-align: center;
+  margin: 3rem 0 3rem 0;
+  position: relative;
+
+  /* linea que atraviesa el titulo */
+  &::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: .1rem;
+    width: 100%;
+    background: $verde-oliva;
+    z-index: -1;
+  }
+
+  span{
+    font-size: 3rem;
+    color: $verde-oliva;
+    background: $fondo;
+    padding: .5rem 1.5rem;
+    /* borde cuadrado del titulo */
+    border: .1rem solid $verde-oliva;
+    border-radius: .5rem;
+  }
+}
+
+
+// media queries
+@media (max-width:1075px){
+  .item-items{
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+        scroll-padding: 7rem;
+      }
+    
+      .header__top{
+
+        .user{
+            display: none;
+        }
+      }
+
+      .home .slide{
+        padding:2rem 5%;
+    
+        .content{
+          width: 50rem;
+    
+          h3{
+            font-size: 4rem;
+          }
+        }
+      }
+}
+
+@media (max-width:768px){
+    #menu-btn{
+        display: inline-block;
+        /*rotar la X */
+        &.fa-times{
+          transform: rotate(180deg);
+        }
+      } 
+    
+      .header{
+        z-index: 300;
+        .navbar{
+          position: absolute;
+          top:99%; left:0; right:0;
+          background: $verde-oliva;
+          /* desaparece menu responsivo */
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    
+          /* aparece menu responsivo */
+          &.active{
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          }
+    
+          a{
+            display: block;
+            font-size: 2rem;
+            color: $white;
+            padding: 1.2rem 1.5rem;
+          }
+        }
+
+        .header__fixed__items{
+            padding: 2% 9%;
+        }
+      }
+
+    .header__top{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .home{
+        margin-top: 11.5rem;
+    }
+
+    .coleccion{
+
+      .coleccion-items{
+        flex-direction: column;
+
+        .img1{
+          margin-bottom: 3rem;
+        }
+
+        .slide{
+          width: 100%;
+        }
+      }
+    }
+}
+
+@media (max-width:550px){
+  .items{
+    padding: 5% 5%;
+    .item-items{
+
+      i{
+        font-size: 3rem;
+      }
+
+      .item-textos{
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .articulos-mas-vendidos{
+
+    .articulos-items{
+
+      .itemm{
+        margin: 0 auto;
+
+        img{
+          width: 100%;
+          height: 80%;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width:450px){
+  .items{
+    padding: 5% 1.5%;
+  }
+
+    html{
+      font-size: 50%;
+    }
+
+    .coleccion{
+
+      .coleccion-items{
+
+        .img1{
+          min-height: 40vh;
+        }
+
+        .img2{
+          min-height: 70vh;
+        }
+      }
+    }
+  }
