@@ -1,24 +1,24 @@
 document.querySelector("#submit1").addEventListener("click", e => {
-    e.preventDefault();
+  e.preventDefault();
 
-    //INGRESE UN NUMERO DE WHATSAPP VALIDO AQUI:
-    let telefono = "573172171691";
+  //INGRESE UN NUMERO DE WHATSAPP VALIDO AQUI:
+  let telefono = "573172171691";
 
-    let ref1 = document.querySelector("#ref1").textContent;
-    let r1 = document.querySelector("#r1").textContent;
-    let precio1 = document.querySelector("#precio1").textContent;
+  let ref1 = document.querySelector("#ref1").textContent;
+  let r1 = document.querySelector("#r1").textContent;
+  let precio1 = document.querySelector("#precio1").textContent;
 
-    let url = `https://api.whatsapp.com/send?phone=${telefono}&text=
-        *_Nombre empresa_*%0A
-        *Tu compra*%0A%0A
-        *Ref del producto:*%0D
-        ${ref1}%0A%0A
-        *Nombre del producto:*%0D
-        ${r1}%0A%0A
-        *Precio:*%0D
-        ${precio1}%0A%0A`;
+  let url = `https://api.whatsapp.com/send?phone=${telefono}&text=
+  *_Nombre empresa_*%0A
+  *Tu compra*%0A%0A
+  *Ref del producto:*%0D
+  ${ref1}%0A%0A
+  *Nombre del producto:*%0D
+  ${r1}%0A%0A
+  *Precio:*%0D
+  ${precio1}%0A%0A`;
 
-    window.open(url);     
+  window.open(url);    
 });
 
 
